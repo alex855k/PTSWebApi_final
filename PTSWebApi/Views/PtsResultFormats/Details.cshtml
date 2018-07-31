@@ -1,0 +1,42 @@
+﻿@model PTSWebApi.Models.PtsResultFormat
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtsResultFormat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultFormatTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResultFormatTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultFormatDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResultFormatDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialBlock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialBlock.TrialBlockId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitType.UnitTypeName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ResultFormatId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,36 @@
+﻿@model PTSWebApi.Models.PtsDosageAmount
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtsDosageAmount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResultValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DosageType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DosageType.DosageTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitType.UnitTypeName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DosageAmountId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

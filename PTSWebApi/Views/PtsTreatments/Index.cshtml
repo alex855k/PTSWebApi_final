@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PTSWebApi.Models.PtsTreatment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TreatmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TreatmentStage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsTrialTreatment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrialGroupId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TreatmentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TreatmentTypeNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentStage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsTrialTreatment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrialGroupId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentType.TreatmentTypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentTypeNavigation.TrialGroupId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TreatmentId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TreatmentId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TreatmentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

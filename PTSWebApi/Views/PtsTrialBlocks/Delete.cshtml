@@ -1,0 +1,45 @@
+﻿@model PTSWebApi.Models.PtsTrialBlock
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PtsTrialBlock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialBlockDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialBlockDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FieldBlock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FieldBlock.BlockChar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialType.TrialTypeId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TrialBlockId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

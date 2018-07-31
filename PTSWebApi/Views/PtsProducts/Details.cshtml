@@ -1,0 +1,36 @@
+﻿@model PTSWebApi.Models.PtsProduct
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtsProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductOwner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductOwner)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCategory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductCategory.ProductCategoryName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ProductId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

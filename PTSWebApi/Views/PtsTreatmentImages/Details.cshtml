@@ -1,0 +1,36 @@
+﻿@model PTSWebApi.Models.PtsTreatmentImage
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtsTreatmentImage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Caption)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Caption)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Treatment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Treatment.TreatmentId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TreatmentImageId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

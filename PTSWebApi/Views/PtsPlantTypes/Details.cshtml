@@ -1,0 +1,24 @@
+﻿@model PTSWebApi.Models.PtsPlantType
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtsPlantType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantTypeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PlantTypeName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PlantTypeId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

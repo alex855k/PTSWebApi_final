@@ -1,0 +1,42 @@
+﻿@model PTSWebApi.Models.PtsTrialBlock
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtsTrialBlock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialBlockDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialBlockDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FieldBlock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FieldBlock.BlockChar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialType.TrialTypeId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TrialBlockId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

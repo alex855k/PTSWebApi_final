@@ -1,0 +1,30 @@
+﻿@model PTSWebApi.Models.PtsTrialObservation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtsTrialObservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment.CommentText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrialGroup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrialGroup.TrialGroupId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TrialObservationId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

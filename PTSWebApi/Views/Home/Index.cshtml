@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="background-color:blueviolet; width:100%;height:100px;text-align:center;padding-top:30px;">
+
+                <p style="font-size: 22px;font-weight:bold;color: white;">
+                   Web API - for Patriotisk Selskab Database
+                </p>
+
+</div>
+
+<div class="row">
+    <div style="margin-left:30px;" class="col-md-3">
+        <h2>Main Entities</h2>
+        <ul>
+            <li><a asp-area="" asp-controller="PtsPlants" asp-action="Index">Plants</a></li>
+            <li><a asp-area="" asp-controller="PtsTrialBlocks" asp-action="Index">Trial Blocks</a></li>
+            <li><a asp-area="" asp-controller="PtsProducts" asp-action="Index">Products</a></li>
+            <li><a asp-area="" asp-controller="PtsTrialGroups" asp-action="Index">Trial Groups</a></li>
+        </ul>
+    </div>
+    <div style="margin-left:30px;" class="col-md-3">
+        <h2>Types</h2>
+        <ul>
+            <li><a asp-area="" asp-controller="PtsTrialTypes" asp-action="Index">Trial Types</a></li>
+            <li><a asp-area="" asp-controller="PtsProductCategories" asp-action="Index">Product Categories</a></li>
+            <li><a asp-area="" asp-controller="PtsPlantTypes" asp-action="Index">Plant Types</a></li>
+            <li><a asp-area="" asp-controller="PtsUnitTypes" asp-action="Index">Unit Types</a></li>
+        </ul>
+    </div>
+    <br />
+</div>

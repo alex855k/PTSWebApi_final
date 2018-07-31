@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PTSWebApi.Models.PtsFieldBlock>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockChar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockChar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockDescription)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FieldBlockId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FieldBlockId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FieldBlockId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

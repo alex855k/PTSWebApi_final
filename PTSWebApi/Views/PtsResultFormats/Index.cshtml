@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PTSWebApi.Models.PtsResultFormat>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultFormatTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultFormatDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrialBlock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultFormatTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultFormatDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrialBlock.TrialBlockId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitType.UnitTypeName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ResultFormatId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ResultFormatId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ResultFormatId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

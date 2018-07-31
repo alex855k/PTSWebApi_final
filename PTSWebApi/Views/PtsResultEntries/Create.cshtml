@@ -1,0 +1,45 @@
+﻿@model PTSWebApi.Models.PtsResultEntry
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>PtsResultEntry</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ResultValue" class="control-label"></label>
+                <input asp-for="ResultValue" class="form-control" />
+                <span asp-validation-for="ResultValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResultFormatId" class="control-label"></label>
+                <select asp-for="ResultFormatId" class ="form-control" asp-items="ViewBag.ResultFormatId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DosageAmountId" class="control-label"></label>
+                <select asp-for="DosageAmountId" class ="form-control" asp-items="ViewBag.DosageAmountId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrialGroupId" class="control-label"></label>
+                <select asp-for="TrialGroupId" class ="form-control" asp-items="ViewBag.TrialGroupId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
